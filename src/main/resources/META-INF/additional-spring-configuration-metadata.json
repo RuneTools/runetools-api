@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "runetools.web.local-cors",
+      "type": "java.lang.String",
+      "description": "Enable CORS for localhost when developing locally"
+    }
+  ]
+}

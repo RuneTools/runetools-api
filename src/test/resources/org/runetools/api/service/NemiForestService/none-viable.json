@@ -1,0 +1,29 @@
+[
+  {
+    "note": "Should not be picked, stickied",
+    "author": "bad1",
+    "created_utc": 1234567890,
+    "link_flair_text": null,
+    "stickied": true,
+    "title": "W48 9/9",
+    "url": "https://my.url/invalid.png"
+  },
+  {
+    "note": "Should not be picked, garbage title",
+    "author": "bad2",
+    "created_utc": 1234567890,
+    "link_flair_text": null,
+    "stickied": false,
+    "title": "Garbage",
+    "url": "https://my.url/invalid.png"
+  },
+  {
+    "note": "Should not be picked, depleted flair",
+    "author": "bad3",
+    "created_utc": 1234567890,
+    "link_flair_text": "Depleted",
+    "stickied": false,
+    "title": "W49 9/9",
+    "url": "https://my.url/invalid.png"
+  }
+]
