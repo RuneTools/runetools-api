@@ -1,8 +1,14 @@
+buildscript {
+    ext {
+        springVersion = '2.2.6.RELEASE'
+    }
+}
+
 plugins {
     id 'java'
 
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'org.springframework.boot' version "${springVersion}"
 }
 
 group 'org.runetools'
@@ -15,12 +21,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-websocket:2.2.2.RELEASE'
+    // Spring boot
+    implementation "org.springframework.boot:spring-boot-starter-web:${springVersion}"
     implementation 'org.springframework.retry:spring-retry:1.2.5.RELEASE'
 
+    // Spring Data
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}"
+    runtimeClasspath 'org.postgresql:postgresql:42.2.8'
+
+    // Compile libraries
     compileOnly 'org.projectlombok:lombok:1.18.10'
     annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
+    // Testing libraries
     testCompile 'org.junit.jupiter:junit-jupiter:5.5.2'
     testCompile 'org.mockito:mockito-junit-jupiter:3.0.0'
 }
